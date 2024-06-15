@@ -9,12 +9,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="-2dp"
-        android:layout_marginTop="625dp"
+        android:layout_marginTop="97dp"
         android:layout_marginEnd="2dp"
         android:layout_marginBottom="-3dp"
         android:background="@color/black"
@@ -23,21 +23,21 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:background="@color/black"></LinearLayout>
+            android:background="@color/black"
+            android:orientation="horizontal"></LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="622dp"
+        android:layout_marginBottom="52dp"
         android:background="@color/black"
         android:orientation="vertical">
 
@@ -55,11 +55,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="145dp"
         android:layout_marginTop="161dp"
         android:layout_marginEnd="149dp"
-        android:layout_marginBottom="474dp"
         app:srcCompat="@drawable/logo" />
 
     <TextView
@@ -67,16 +65,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="271dp"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="401dp"
+        android:layout_marginBottom="345dp"
         android:text="Work in progress"
-        android:textSize="30sp"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/button"
@@ -86,14 +82,14 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="51dp"
-        android:layout_marginTop="353dp"
+        android:layout_marginTop="480dp"
         android:layout_marginEnd="53dp"
         android:text="Redirect to website" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="111dp"
-        android:orientation="horizontal"
-        android:background="@color/black"></LinearLayout>
+        android:background="@color/black"
+        android:orientation="horizontal"></LinearLayout>
 
 </RelativeLayout>
