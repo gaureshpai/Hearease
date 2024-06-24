@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HearEase</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #1385ab;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .sidebar h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .sidebar nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px 0;
+            display: block;
+        }
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: #121212;
+            color: white;
+        }
+        .main-content .header {
+            padding: 20px;
+            background-color: #282828;
+            display: flex;
+            align-items: center;
+        }
+        .main-content .content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .footer {
+            padding: 10px 20px;
+            background-color: #282828;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .footer .controls {
+            display: flex;
+            align-items: center;
+        }
+        .footer .controls button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2em;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div>
+            <h1>HearEase</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Search</a>
+                <a href="#">Library</a>
+            </nav>
+        </div>
+        <nav>
+            <a href="#">Create Playlist</a>
+            <a href="#">Liked Songs</a>
+        </nav>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <input type="text" placeholder="Search..." style="flex: 1; padding: 5px;">
+        </div>
+    </div>
+    <div class="footer">
+        <div class="controls">
+            <button>&#9664;&#9664;</button>
+            <button>&#9654;</button>
+            <button>&#9654;&#9654;</button>
+        </div>
+        <div class="now-playing">
+            <p>Now Playing: Song Title</p>
+        </div>
+    </div>
+</body>
+</html>
