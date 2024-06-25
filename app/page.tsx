@@ -1,10 +1,21 @@
-import React from "react";
-import Main from "@/components/Main";
+import React from 'react';
+import Sidebar from '@/components/Sidebar';
+import Header from '@/components/Header';
+import MainContent from '@/components/Maincontent';
+import Footer from '@/components/Footer';
+import styles from '@/public/styles/Home.module.css'; // Importing CSS Module
 
-export default function Home() {
+const Home = () => {
   return (
-    <main className="Body">
-      <Main/>
-    </main>
-  );
+    <div className={styles.container}>
+      <Sidebar />
+      <div className={styles.mainContent}>
+        <Header />
+        <MainContent />
+        <Footer />
+      </div>
+    </div>
+  )
 }
+
+export default Home;
