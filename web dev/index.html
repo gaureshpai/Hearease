@@ -3,58 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hearease</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>HearEase</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #1385ab;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .sidebar h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .sidebar nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px 0;
+            display: block;
+        }
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: #121212;
+            color: white;
+        }
+        .main-content .header {
+            padding: 20px;
+            background-color: #282828;
+            display: flex;
+            align-items: center;
+        }
+        .main-content .content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .footer {
+            padding: 10px 20px;
+            background-color: #282828;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .footer .controls {
+            display: flex;
+            align-items: center;
+        }
+        .footer .controls button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2em;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Hearease</h1>
+    <div class="sidebar">
+        <div>
+            <h1>HearEase</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Search</a>
+                <a href="#">Library</a>
+            </nav>
+        </div>
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <a href="#">Create Playlist</a>
+            <a href="#">Liked Songs</a>
         </nav>
-    </header>
-    <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>Welcome to Hearease, where we provide the best hearing solutions.</p>
-        </section>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Hearease is dedicated to improving your hearing experience with state-of-the-art technology and personalized care.</p>
-        </section>
-        <section id="services">
-            <h2>Our Services</h2>
-            <ul>
-                <li>Hearing Tests</li>
-                <li>Hearing Aids</li>
-                <li>Custom Ear Protection</li>
-                <li>Hearing Aid Repair</li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form action="submit_form.php" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter the Name" required>
-                <br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter the email" required>
-                <br>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" placeholder="Enter the querry/Message" required></textarea>
-                <br>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Hearease. All rights reserved.</p>
-    </footer>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <input type="text" placeholder="Search..." style="flex: 1; padding: 5px;">
+        </div>
+    </div>
+    <div class="footer">
+        <div class="controls">
+            <button>&#9664;&#9664;</button>
+            <button>&#9654;</button>
+            <button>&#9654;&#9654;</button>
+        </div>
+        <div class="now-playing">
+            <p>Now Playing: Song Title</p>
+        </div>
+    </div>
 </body>
 </html>
