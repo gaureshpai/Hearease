@@ -1,13 +1,111 @@
+
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
-    height: 100vh;
-}
+    height: 100vh;   
+    }  
+    .body {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sidebar {
+        width: 250px;
+        background-color: #1385ab;
+        color: rgb(23, 19, 19);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+        width: 200px;
+        background: #f4f4f4;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .sidebar h1 {
+        margin: 0;
+        font-size: 1.5em;
+    }
+    .sidebar nav a {
+        color: white;
+        text-decoration: none;
+        margin: 15px 0;
+        display: block;
+    }
+    .main-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        background-color: #121212;
+        color: white;
+    }
+    .main-content .header {
+        padding: 20px;
+        background-color: #282828;
+        display: flex;
+        align-items: center;
+    }
+    .main-content .content {
+        flex: 1;
+        padding: 20px;
+        overflow-y: auto;
+    }
+    .footer {
+        padding: 10px 20px;
+        background-color: #191717;
+        color :aliceblue;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .footer .controls {
+        display: flex;
+        align-items: center;
+    }
+    .footer .controls button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.2em;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    .play-button {
+        background-color: #0ca5dc; 
+        border: none; 
+        border-radius: 25px; 
+        color: white; 
+        padding: 10px 20px; 
+        font-size: 16px;
+        font-weight: bold; 
+        text-align: center; 
+        text-decoration: none; 
+        display: inline-block; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease;
+        align-items: center;
+        place-items: center;
+    }
+    
+    .play-button:hover {
+        background-color: #0c5c98; 
+    }
+    
+    .play-button:active {
+        background-color: #9df6f1; 
+    }
+    
+    .play-button:focus {
+        outline: none; 
+    }
+
 .sidebar {
     width: 250px;
     background-color: #1385ab;
-    color: white;
+    color: rgb(23, 19, 19);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -16,12 +114,16 @@ body {
 .sidebar h1 {
     margin: 0;
     font-size: 1.5em;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    font-weight: bolder;
 }
 .sidebar nav a {
-    color: white;
+    color: rgb(254, 246, 246);
     text-decoration: none;
     margin: 15px 0;
     display: block;
+    font-weight: 600;
+    font-style:inherit;
 }
 .main-content {
     flex: 1;
@@ -35,15 +137,13 @@ body {
     background-color: #282828;
     display: flex;
     align-items: center;
+    border-radius: 45px;
 }
-.main-content .content {
-    flex: 1;
-    padding: 20px;
-    overflow-y: auto;
-}
+
 .footer {
     padding: 10px 20px;
-    background-color: #282828;
+    background-color: #191717;
+    color :aliceblue;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -59,4 +159,35 @@ body {
     font-size: 1.2em;
     margin: 0 10px;
     cursor: pointer;
+}
+.play-button {
+    background-color: #0ca5dc; 
+    border: none; 
+    border-radius: 25px; 
+    color: white; 
+    padding: 10px 20px; 
+    font-size: 16px;
+    font-weight: bold; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+    align-items: center;
+    height: 10%;
+    margin: 0;
+    display: grid;
+    place-items: center;
+}
+
+.play-button:hover {
+    background-color: #0c5c98; 
+}
+
+.play-button:active {
+    background-color: #9df6f1; 
+}
+
+.play-button:focus {
+    outline: none; 
 }
