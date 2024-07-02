@@ -2,7 +2,7 @@ import React from 'react';
 import Sidebar from '@/components/Sidebar';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import styles from '@/public/styles/DownloadPage.module.css'; // Importing CSS Module
+import styles from '@/public/styles/DownloadPage.module.css';
 
 const DownloadPage = () => {
     return (
