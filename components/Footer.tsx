@@ -1,14 +1,15 @@
 import React from 'react';
+import styles from '@/public/styles/Footer.module.css';
 
 const Footer = () => {
     return (
-        <div className="p-2.5 px-5 bg-gray-900 text-blue-50 flex items-center justify-between">
-            <div className="flex items-center">
-                <button className="bg-none border-none text-white text-xl mx-2.5 cursor-pointer">&#9664;&#9664;1</button>
-                <button className="bg-none border-none text-white text-xl mx-2.5 cursor-pointer">&#9654;2</button>
-                <button className="bg-none border-none text-white text-xl mx-2.5 cursor-pointer">&#9654;&#9654;3</button>
+        <div className={styles.footer}>
+            <div className={styles.controls}>
+                <button>&#9664;&#9664;</button>
+                <button>&#9654;</button>
+                <button>&#9654;&#9654;</button>
             </div>
-            <div className="text-base">
+            <div className={styles.nowPlaying}>
                 <p>Now Playing: Song Title</p>
             </div>
         </div>

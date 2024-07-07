@@ -3,12 +3,13 @@ import Sidebar from '@/components/Sidebar';
 import Header from '@/components/Header';
 import MainContent from '@/components/Maincontent';
 import Footer from '@/components/Footer';
+import styles from '@/public/styles/Home.module.css'; // Importing CSS Module
 
 const Home = () => {
   return (
-    <div className="flex h-screen font-sans">
+    <div className={styles.container}>
       <Sidebar />
-      <div className="flex flex-1 flex-col bg-gray-900 text-white">
+      <div className={styles.mainContent}>
         <Header />
         <MainContent />
         <Footer />
