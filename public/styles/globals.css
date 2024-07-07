@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Your component styles */
 .container {
   @apply flex h-screen bg-gray-900 text-white;
 }
@@ -52,29 +51,5 @@
 
   .btnDownload {
     @apply text-sm px-4 py-2;
-  }
-}
-
-/* Global styles */
-:global {
-  :root {
-    --background-color: #121212;
-    --text-color: #ffffff;
-    --button-bg-color: #4CAF50;
-    --button-hover-bg-color: #45a049;
-    --button-text-color: #ffffff;
-    --transition-duration: 0.3s;
-    --container-padding: 20px;
-    --h1-font-size: 2em;
-    --button-padding: 10px 20px;
-    --button-font-size: 16px;
-    --button-border-radius: 5px;
-  }
-
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
   }
 }
