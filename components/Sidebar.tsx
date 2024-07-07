@@ -1,33 +1,22 @@
 import React from 'react';
 import Link from 'next/link';
+import styles from '@/public/styles/Sidebar.module.css';
 
 const Sidebar = () => {
     return (
-        <div className="w-64 bg-blue-600 text-gray-800 flex flex-col justify-between p-5">
+        <div className={styles.sidebar}>
             <div>
-                <h1 className="m-0 text-2xl font-bold">HearEase</h1>
-                <nav className="mt-4">
-                    <Link href="/" legacyBehavior>
-                        <a className="text-white no-underline mb-4 block font-semibold">Home</a>
-                    </Link>
-                    <Link href="/" legacyBehavior>
-                        <a className="text-white no-underline mb-4 block font-semibold">Search</a>
-                    </Link>
-                    <Link href="/" legacyBehavior>
-                        <a className="text-white no-underline mb-4 block font-semibold">Library</a>
-                    </Link>
+                <h1>HearEase</h1>
+                <nav>
+                    <Link href="/">Home</Link>
+                    <Link href="/">Search</Link>
+                    <Link href="/">Library</Link>
                 </nav>
             </div>
-            <nav className="mt-4">
-                <Link href="/" legacyBehavior>
-                    <a className="text-white no-underline mb-4 block font-semibold">Create Playlist</a>
-                </Link>
-                <Link href="/" legacyBehavior>
-                    <a className="text-white no-underline mb-4 block font-semibold">Liked Songs</a>
-                </Link>
-                <Link href="/download" legacyBehavior>
-                    <a className="text-white no-underline mb-4 block font-semibold">Download</a>
-                </Link>
+            <nav>
+                <Link href="/">Create Playlist</Link>
+                <Link href="/">Liked Songs</Link>
+                <Link href="/download">Download</Link>
             </nav>
         </div>
     );
