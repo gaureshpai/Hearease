@@ -1,10 +1,13 @@
-import React from "react";
-import Main from "@/components/Main";
+import React from 'react';
+import '@/public/styles/globals.css'
 
-export default function Home() {
+
+const HomePage = () => {
   return (
-    <main className="Body">
-      <Main/>
-    </main>
+    <div className='mainbodyy'>
+    
+    </div>
   );
-}
+};
+
+export default HomePage;

@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.download-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+    background-color:aquamarine; /* Black background */
+    padding: 20px;
+    color: black; /* White text color for better contrast */
+}
+
+.download-container h1 {
+    font-size: 2.5rem; /* Large heading */
+    margin-bottom: 20px;
+    color: black; /* Bright green text color */
+}
+
+.download-container p {
+    font-size: 1.2rem; /* Medium-sized paragraph */
+    margin-bottom: 40px;
+    color: black; /* Bright green text color */
+}
+
+.download-button a {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.2rem; /* Medium-sized text */
+    color: #000000; /* Black text color */
+    background-color: white; /* Bright green background color */
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.download-button a:hover {
+    background-color: #00cc00; /* Darker green on hover */
+}
