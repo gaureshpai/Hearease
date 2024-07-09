@@ -33,7 +33,6 @@ export default function RootLayout({
             <Player/>
           </div>
         </div>
-        <Footer />
       </body>
     </html>
   );
