@@ -1,0 +1,12 @@
+.Player-container{
+    height: 10vh;
+    background-color: green;
+    color: white;
+    width: 90vw;
+    justify-content: center;
+    text-align: center;
+}
+
+.player-buttons{
+    margin-top: 1%;
+}

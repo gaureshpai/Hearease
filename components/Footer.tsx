@@ -1,9 +1,14 @@
-import React from 'react'
+import Link from 'next/link';
+import React from 'react';
+import '@/public/styles/footer.css'
 
 const Footer = () => {
-  return (
-    <div>Footer</div>
-  )
-}
+    return (
+        <div className='footer'>
+            <p>&copy; 2024 HearEase. All rights reserved.</p>
 
-export default Footer
+        </div>
+    );
+};
+
+export default Footer;
