@@ -1,9 +1,9 @@
 .sidebar{
     display: flex;
     flex-direction: column;
-    width: 10vw;
+    width: 15vw;
     background-color: blue;
-    height: 80vh;
+    min-height: 85vh;
 }
 
 .button-container{

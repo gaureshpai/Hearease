@@ -9,6 +9,7 @@ const Sidebar = () => {
                 <div className='buttons'><Link href="/">Home</Link></div>
                 <div className='buttons'><Link href="/Library">Library</Link></div>
                 <div className='buttons'><Link href="/CreatePlaylist">Create Playlist</Link></div>
+                <div className='buttons'><Link href="/Profiles">View all contributors</Link></div>
             </div>
         </div>
     );

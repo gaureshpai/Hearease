@@ -4,9 +4,20 @@
 
 body {
     margin: 0;
+    overflow:hidden;
 }
 
 .mainbody {
     display: flex;
     flex-direction: row;
+}
+
+.children{
+    min-height: 75vh;
+}
+
+.mainbodyy {
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: auto;
 }

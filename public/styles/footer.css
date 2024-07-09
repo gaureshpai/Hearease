@@ -1,7 +1,11 @@
 .footer{
     width: 100vw;
-    height: 10vh;
+    height: 5vh;
     background-color: black;
     color: white;
     text-align: center;
+}
+
+.contri{
+    margin-top: 1%;
 }

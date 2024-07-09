@@ -1,18 +1,14 @@
 import React from 'react';
+import '@/public/styles/Player.css'
 
-const Footer = () => {
+const Player = () => {
     return (
-        <div>
-            <div>
-                <button>&#9664;&#9664;</button>
-                <button>&#9654;</button>
-                <button>&#9654;&#9654;</button>
-            </div>
-            <div>
-                <p>Now Playing: Song Title</p>
+        <div className='Player-container'>
+            <div className='player-button-container'>
+                <button className='player-buttons'><img src='/images/▶.png' alt='play'/></button>
             </div>
         </div>
     );
 };
 
-export default Footer;
+export default Player;
