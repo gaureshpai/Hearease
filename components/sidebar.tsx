@@ -5,11 +5,11 @@ import '@/public/styles/sidebar.css'
 const Sidebar = () => {
     return (
         <div className="sidebar">
-            <nav>
-                <Link href="/">Home</Link>
-                <Link href="/Library">Library</Link>
-                <Link href="/CreatePlaylist">Create Playlist</Link>
-            </nav>
+            <div className='button-container'>
+                <div className='buttons'><Link href="/">Home</Link></div>
+                <div className='buttons'><Link href="/Library">Library</Link></div>
+                <div className='buttons'><Link href="/CreatePlaylist">Create Playlist</Link></div>
+            </div>
         </div>
     );
 };

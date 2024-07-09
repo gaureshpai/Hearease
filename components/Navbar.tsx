@@ -8,7 +8,9 @@ const Navbar = () => {
       <div className='heading'>
         <Link  href="/" >HearEase</Link>
       </div>
+      <div className='download'>
         <Link href="/download" className='download'>Download App</Link>
+      </div>   
     </div>
   )
 }

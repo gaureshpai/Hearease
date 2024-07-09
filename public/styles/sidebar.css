@@ -1,0 +1,24 @@
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    width: 10vw;
+    background-color: blue;
+    height: 80vh;
+}
+
+.button-container{
+    flex-direction: row;
+    gap: 20vh;
+}
+
+.buttons{
+    background-color: blueviolet;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 4vh;
+    margin-top: 4vh;
+}
+
+Link{
+    cursor: pointer;
+}
