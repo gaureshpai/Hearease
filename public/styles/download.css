@@ -9,34 +9,34 @@
     justify-content: center;
     height: 80vh;
     text-align: center;
-    background-color:aquamarine; /* Black background */
+    background-color:aquamarine;
     padding: 20px;
-    color: black; /* White text color for better contrast */
+    color: black;
 }
 
 .download-container h1 {
-    font-size: 2.5rem; /* Large heading */
+    font-size: 2.5rem;
     margin-bottom: 20px;
-    color: black; /* Bright green text color */
+    color: black;
 }
 
 .download-container p {
-    font-size: 1.2rem; /* Medium-sized paragraph */
+    font-size: 1.2rem;
     margin-bottom: 40px;
-    color: black; /* Bright green text color */
+    color: black;
 }
 
 .download-button a {
     display: inline-block;
     padding: 12px 24px;
-    font-size: 1.2rem; /* Medium-sized text */
-    color: #000000; /* Black text color */
-    background-color: white; /* Bright green background color */
+    font-size: 1.2rem;
+    color: #000000;
+    background-color: white;
     border-radius: 8px;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 .download-button a:hover {
-    background-color: #00cc00; /* Darker green on hover */
+    background-color: #00cc00;
 }
