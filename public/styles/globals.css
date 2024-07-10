@@ -68,7 +68,6 @@ body {
 }
 
 .tinnitus-image{
-    width: 30vw;
-    height: 30vh;
     border: 2px solid black;
+    min-width: 300px;
 }
