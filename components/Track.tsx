@@ -1,4 +1,3 @@
-// Track.tsx
 import React from 'react';
 import { useAudio } from '@/content/AudioContext';
 
@@ -7,13 +6,13 @@ interface TrackProps {
 }
 
 const Track: React.FC<TrackProps> = ({ track }) => {
-  const { playTrack, pauseTrack, isPlaying } = useAudio();
+  const { playTrack, pauseTrack, isPlaying, currentTrack } = useAudio();
 
   const handlePlayPause = () => {
-    if (isPlaying && track === isPlaying.track) {
-      pauseTrack(); // Pause if currently playing the same track
+    if (isPlaying && track === currentTrack) {
+      pauseTrack();
     } else {
-      playTrack(track); // Play the track
+      playTrack(track);
     }
   };
 
@@ -22,9 +21,9 @@ const Track: React.FC<TrackProps> = ({ track }) => {
       <p>{track}</p>
       <button
         className="play-button bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
-        onClick={handlePlayPause} // onClick handler to toggle play/pause
+        onClick={handlePlayPause}
       >
-        {isPlaying && track === isPlaying.track ? 'Pause' : 'Play'}
+        {isPlaying && track === currentTrack ? 'Pause' : 'Play'}
       </button>
     </div>
   );
