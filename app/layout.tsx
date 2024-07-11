@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Hearease",
-  description: "Miniproject website by Harshita Dhanya and team",
+  description: "Miniproject website by Harshita, Dhanya, Pandyavarshini, Karthika",
 };
 
 export default function RootLayout({
