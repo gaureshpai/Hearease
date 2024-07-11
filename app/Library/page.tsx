@@ -2,6 +2,7 @@
 
 import React, { useState, useRef } from 'react';
 import Track from '@/components/Track';
+import '@/public/styles/playlist.css'
 
 const tracks = [
   'sounds/bird.mp3',
@@ -29,11 +30,11 @@ const Playlist = () => {
   };
 
   return (
-    <div>
+    <div className='playlist-container'>
       <h2>Playlist</h2>
-      <ul>
+      <ul className='track-container'>
         {tracks.map((track, index) => (
-          <li key={index}>
+          <li key={index} className='individual'>
             <Track track={track} onClick={() => handlePlayPause(track)} />
           </li>
         ))}

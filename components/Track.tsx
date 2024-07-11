@@ -6,7 +6,6 @@ interface TrackProps {
   onClick: () => void;
 }
 
-
 const Track: React.FC<TrackProps> = ({ track }) => {
   const { playTrack, pauseTrack, isPlaying, currentTrack } = useAudio();
 
@@ -18,11 +17,20 @@ const Track: React.FC<TrackProps> = ({ track }) => {
     }
   };
 
+  const cleanTrackName = (track:any) => {
+    const parts = track.split('/');
+    const fileName = parts[parts.length - 1];
+
+    const cleanName = fileName.replace('.mp3', '');
+
+    return cleanName;
+  };
+  
   return (
-    <div className="track-item bg-white p-2 my-2 flex items-center justify-between">
-      <p>{track}</p>
+    <div className="track-item">
+      <p>{cleanTrackName(track)}s sound</p>
       <button
-        className="play-button bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+        className="play-button"
         onClick={handlePlayPause}
       >
         {isPlaying && track === currentTrack ? 'Pause' : 'Play'}
