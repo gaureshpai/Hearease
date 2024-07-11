@@ -1,8 +1,11 @@
 import React from 'react'
+import '@/public/styles/create.css'
 
 const CreatePlaylist = () => {
   return (
-    <div>CreatePlaylist</div>
+    <div className='create-container'>
+      CreatePlaylist
+    </div>
   )
 }
 
