@@ -4,20 +4,70 @@
 
 body {
     margin: 0;
-    overflow:hidden;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
 }
 
 .mainbody {
     display: flex;
     flex-direction: row;
+    height: 100vh;
 }
 
-.children{
+.children {
     min-height: 80vh;
+    flex-grow: 1;
 }
 
 .mainbodyy {
     width: 100%;
-    overflow-y: auto;
-    overflow-x: auto;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    flex-direction: row;
+    display: flex;
+    min-height: 80vh;
+    width: 85vw;
+}
+
+.download-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.download-button {
+    margin-top: 20px;
+}
+
+.Player-container {
+    height: 10vh;
+    background-color: green;
+    color: white;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.player-buttons {
+    margin-top: 1%;
+}
+
+.about {
+    margin-bottom: 20px;
+}
+
+.about h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.about p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.tinnitus-image{
+    border: 2px solid black;
+    min-width: 300px;
 }

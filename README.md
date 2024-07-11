@@ -1,3 +1,3 @@
 # Mini Project Github repository
 
-### by harshita dhanya and team
+### by harshita, dhanya, Pandyavarshini, Karthika

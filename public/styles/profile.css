@@ -1,0 +1,25 @@
+.profile {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.profile h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.profile p {
+  margin: 5px 0;
+}
+
+.profile a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.profile a:hover {
+  text-decoration: underline;
+}

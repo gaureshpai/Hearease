@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.playlist-container {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #282c34;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2.5rem;
+  color: #61dafb;
+}
+
+.track-container {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 600px;
+}
+
+.individual {
+  background-color: #444;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.individual:hover {
+  background-color: #555;
+  transform: scale(1.02);
+}
+
+.track-name {
+  font-size: 1.2rem;
+  color: #61dafb; 
+}
+
+.audio-player {
+  display: none;
+}
+
+.play-pause-button {
+  background-color: #61dafb;
+  color: #282c34;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.play-pause-button:hover {
+  background-color: #21a1f1;
+}
