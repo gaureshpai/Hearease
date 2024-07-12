@@ -3,6 +3,7 @@ import { useAudio } from '@/content/AudioContext';
 
 interface TrackProps {
   track: string;
+  onClick: () => void;
 }
 
 const Track: React.FC<TrackProps> = ({ track }) => {
