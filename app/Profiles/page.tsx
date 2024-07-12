@@ -16,7 +16,7 @@ const Profiles = () => {
   ];
 
   return (
-    <div>
+    <div className='profile-container'>
       {profiles.map((profile, index) => (
         <div key={index} className="profile">
           <h2>{profile.name}</h2>

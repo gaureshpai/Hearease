@@ -3,7 +3,7 @@
     flex-direction: column;
     width: 15vw;
     background-color: blue;
-    min-height: 85vh;
+    max-height: 90vh;
 }
 
 .button-container{
