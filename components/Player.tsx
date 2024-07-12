@@ -5,13 +5,13 @@ import '@/public/styles/Player.css';
 import { useAudio } from '@/content/AudioContext';
 
 const Player = () => {
-    const { isPlaying, playTrack, pauseTrack, currentTrack } = useAudio();
+    const { isPlaying, playTracks, pauseTracks, currentTracks } = useAudio();
 
     const handlePlayPause = () => {
         if (isPlaying) {
-            pauseTrack();
+            pauseTracks();
         } else {
-            playTrack(currentTrack);
+            playTracks(currentTracks);
         }
     };
 
