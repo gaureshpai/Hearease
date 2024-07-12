@@ -4,6 +4,8 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #f9f9f9;
+  max-width: 85vw;
+  padding: 20px;
 }
 
 .profile h2 {
@@ -22,4 +24,10 @@
 
 .profile a:hover {
   text-decoration: underline;
+}
+
+.profile-container{
+  align-items: center;
+  text-align: center;
+  max-width: 85vw;
 }
