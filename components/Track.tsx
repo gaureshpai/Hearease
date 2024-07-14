@@ -3,17 +3,16 @@ import { useAudio } from '@/content/AudioContext';
 
 interface TrackProps {
   track: string;
-  onClick: () => void;
 }
 
 const Track: React.FC<TrackProps> = ({ track }) => {
-  const { playTracks, pauseTracks, isPlaying, currentTracks } = useAudio();
+  const { playTrack, pauseTrack, isPlaying, currentTrack } = useAudio();
 
   const handlePlayPause = () => {
-    if (isPlaying) {
-      pauseTracks();
-    } else {
-      playTracks([track]);
+    if (isPlaying && currentTrack === track) {
+      pauseTrack();
+    } else if (!isPlaying || currentTrack !== track) {
+      playTrack(track);
     }
   };
 
@@ -24,10 +23,10 @@ const Track: React.FC<TrackProps> = ({ track }) => {
   };
 
   return (
-    <div className="track-item">
-      <p>{cleanTrackName(track)} sound</p>
-      <button className="play-button" onClick={handlePlayPause}>
-        {isPlaying ? 'Pause' : 'Play'}
+    <div className="track-item p-2">
+      <p>{cleanTrackName(track)}</p>
+      <button className="play-button bg-blue-500 text-white p-2 rounded" onClick={handlePlayPause}>
+        {isPlaying && currentTrack === track ? 'Pause' : 'Play'}
       </button>
     </div>
   );

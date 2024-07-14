@@ -1,8 +1,9 @@
 'use client'
 
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import Track from '@/components/Track';
-import '@/public/styles/playlist.css'
+import '@/public/styles/playlist.css';
+import { useAudio } from '@/content/AudioContext';
 
 const tracks = [
   'sounds/bird.mp3',
@@ -11,35 +12,29 @@ const tracks = [
 ];
 
 const Playlist = () => {
-  const [currentTrack, setCurrentTrack] = useState<string | null>(null);
-  const [isPlaying, setIsPlaying] = useState<boolean>(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const { playTracks, pauseTracks, isAllPlaying } = useAudio();
 
-  const handlePlayPause = (track: string) => {
-    if (currentTrack === track) {
-      if (isPlaying) {
-        audioRef.current?.pause();
-      } else {
-        audioRef.current?.play();
-      }
-      setIsPlaying(!isPlaying);
+  const handlePlayAll = () => {
+    if (isAllPlaying) {
+      pauseTracks();
     } else {
-      setCurrentTrack(track);
-      setIsPlaying(true);
+      playTracks(tracks);
     }
   };
 
   return (
     <div className='playlist-container'>
       <h2>Playlist</h2>
+      <button onClick={handlePlayAll} className="play-all-button">
+        {isAllPlaying ? 'Pause All' : 'Play All'}
+      </button>
       <ul className='track-container'>
         {tracks.map((track, index) => (
           <li key={index} className='individual'>
-            <Track track={track} onClick={() => handlePlayPause(track)} />
+            <Track track={track} />
           </li>
         ))}
       </ul>
-      <audio ref={audioRef} src={`/sounds/${currentTrack}`} />
     </div>
   );
 };
