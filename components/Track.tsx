@@ -6,12 +6,12 @@ interface TrackProps {
 }
 
 const Track: React.FC<TrackProps> = ({ track }) => {
-  const { playTrack, pauseTrack, isPlaying, currentTrack } = useAudio();
+  const { playTrack, pauseTrack, isPlaying, currentTracks } = useAudio();
 
   const handlePlayPause = () => {
-    if (isPlaying && currentTrack === track) {
-      pauseTrack();
-    } else if (!isPlaying || currentTrack !== track) {
+    if (currentTracks.includes(track)) {
+      pauseTrack(track);
+    } else {
       playTrack(track);
     }
   };
@@ -26,7 +26,7 @@ const Track: React.FC<TrackProps> = ({ track }) => {
     <div className="track-item p-2">
       <p>{cleanTrackName(track)}</p>
       <button className="play-button bg-blue-500 text-white p-2 rounded" onClick={handlePlayPause}>
-        {isPlaying && currentTrack === track ? 'Pause' : 'Play'}
+        {currentTracks.includes(track) ? 'Pause' : 'Play'}
       </button>
     </div>
   );

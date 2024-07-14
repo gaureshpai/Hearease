@@ -3,62 +3,73 @@
 import React, { createContext, useState, useContext, useRef } from 'react';
 
 interface AudioContextProps {
-    currentTrack: string | null;
     currentTracks: string[];
+    currentTrack: string | null;
     isPlaying: boolean;
     isAllPlaying: boolean;
-    playTracks: (tracks: string[]) => void;
     playTrack: (track: string) => void;
+    playTracks: (tracks: string[]) => void;
+    pauseTrack: (track: string) => void;
     pauseTracks: () => void;
-    pauseTrack: () => void;
 }
 
 const AudioContext = createContext<AudioContextProps | undefined>(undefined);
 
 export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const [currentTrack, setCurrentTrack] = useState<string | null>(null);
     const [currentTracks, setCurrentTracks] = useState<string[]>([]);
+    const [currentTrack, setCurrentTrack] = useState<string | null>(null);
     const [isPlaying, setIsPlaying] = useState<boolean>(false);
     const [isAllPlaying, setIsAllPlaying] = useState<boolean>(false);
-    const audioRef = useRef<HTMLAudioElement | null>(null);
-    const audioRefs = useRef<HTMLAudioElement[]>([]);
-
-    const playTracks = (tracks: string[]) => {
-        setCurrentTracks(tracks);
-        audioRefs.current = tracks.map((track, index) => {
-            const audio = new Audio(track);
-            audio.play();
-            return audio;
-        });
-        setIsAllPlaying(true);
-    };
+    const audioRefs = useRef<Map<string, HTMLAudioElement>>(new Map());
 
     const playTrack = (track: string) => {
-        if (currentTrack !== track) {
-            setCurrentTrack(track);
-            if (audioRef.current) {
-                audioRef.current.src = track;
-                audioRef.current.play();
-            }
-        } else {
-            audioRef.current?.play();
+        if (!audioRefs.current.has(track)) {
+            const audio = new Audio(track);
+            audioRefs.current.set(track, audio);
         }
+        const audio = audioRefs.current.get(track);
+        audio?.play();
+        setCurrentTracks(prevTracks => [...prevTracks, track]);
+        setCurrentTrack(track);
         setIsPlaying(true);
     };
 
-    const pauseTracks = () => {
-        audioRefs.current.forEach(audio => audio.pause());
-        setIsAllPlaying(false);
+    const playTracks = (tracks: string[]) => {
+        tracks.forEach((track) => {
+            if (!audioRefs.current.has(track)) {
+                const audio = new Audio(track);
+                audioRefs.current.set(track, audio);
+            }
+            const audio = audioRefs.current.get(track);
+            audio?.play();
+        });
+        setCurrentTracks(tracks);
+        setIsAllPlaying(true);
+        setIsPlaying(true);
     };
 
-    const pauseTrack = () => {
-        audioRef.current?.pause();
+    const pauseTrack = (track: string) => {
+        const audio = audioRefs.current.get(track);
+        audio?.pause();
+        setCurrentTracks(prevTracks => prevTracks.filter(t => t !== track));
+        if (currentTracks.length === 1) {
+            setIsPlaying(false);
+            setCurrentTrack(null);
+        }
+    };
+
+    const pauseTracks = () => {
+        audioRefs.current.forEach((audio) => audio.pause());
+        setIsAllPlaying(false);
         setIsPlaying(false);
+        setCurrentTracks([]);
+        setCurrentTrack(null);
     };
 
     return (
-        <AudioContext.Provider value={{ currentTrack, currentTracks, isPlaying, isAllPlaying, playTracks, playTrack, pauseTracks, pauseTrack }}>
-            <audio ref={audioRef} />
+        <AudioContext.Provider
+            value={{ currentTracks, currentTrack, isPlaying, isAllPlaying, playTrack, playTracks, pauseTrack, pauseTracks }}
+        >
             {children}
         </AudioContext.Provider>
     );
