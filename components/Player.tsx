@@ -5,7 +5,7 @@ import '@/public/styles/Player.css';
 import { useAudio } from '@/content/AudioContext';
 
 const Player = () => {
-    const { isAllPlaying, playTracks, pauseTracks, currentTracks } = useAudio();
+    const { isAllPlaying, playTracks, pauseTracks, isPlaying, currentTracks } = useAudio();
 
     const handlePlayPauseAll = () => {
         if (isAllPlaying) {
@@ -19,11 +19,19 @@ const Player = () => {
         }
     };
 
+    const handlePlayPause = () => {
+        if (isAllPlaying || isPlaying) {
+            pauseTracks();
+        } else {
+            playTracks(currentTracks);
+        }
+    };
+
     return (
         <div className='Player-container'>
             <div className='player-button-container'>
-                <button className='player-buttons' onClick={handlePlayPauseAll}>
-                    <img src={`/images/${isAllPlaying ? '⏸' : '▶'}.png`} alt={isAllPlaying ? 'Pause All' : 'Play All'} />
+                <button className='player-buttons' onClick={isAllPlaying ? handlePlayPauseAll : handlePlayPause}>
+                    <img src={`/images/${isAllPlaying || isPlaying ? '⏸' : '▶'}.png`} alt={isAllPlaying || isPlaying ? 'Pause All' : 'Play All'} />
                 </button>
                 {currentTracks.length > 0 && (
                     <div className='playing-tracks'>
