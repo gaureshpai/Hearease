@@ -20,8 +20,8 @@ const About = () => {
     ));
 
     return (
-        <div className="mainbodyy bg-white p-8 overflow-auto">
-            <h1 className="text-4xl mb-4">About Tinnitus</h1>
+        <div className="mainbodyy bg-gray-900 p-8 overflow-auto">
+            <h1 className="text-4xl mb-4 text-white">About Tinnitus</h1>
             <div className="about mb-8 flex flex-wrap">
                 <div className="text-lg leading-relaxed flex-basis-full md:flex-basis-70 md:max-w-70">
                     {formattedText}

@@ -28,7 +28,6 @@ body {
     overflow-y: auto;
     padding: 2rem;
     margin: auto;
-    background-color: #f8f9fa;
     justify-content: space-around;
 }
 
@@ -85,10 +84,9 @@ body {
 }
 
 .photo-and-reference {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
-    left: auto;  /* Remove left positioning */
-    right: 0;    /* Position on the right */
+    left: auto; 
+    right: 0;  
 
     @media (min-width: 768px) {
         margin-bottom: 0;
