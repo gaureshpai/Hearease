@@ -6,9 +6,9 @@ import { useAudio } from '@/content/AudioContext';
 
 const Player = () => {
     const { isAllPlaying, playTracks, pauseTracks, isPlaying, currentTracks, setVolume } = useAudio();
-    const [volume, setLocalVolume] = useState(50);
+    const [volume, setLocalVolume] = useState(100);
     const [isMuted, setIsMuted] = useState(false);
-    const [prevVolume, setPrevVolume] = useState(50);
+    const [prevVolume, setPrevVolume] = useState(100);
 
     const handlePlayPauseAll = () => {
         if (isAllPlaying) {
@@ -17,7 +17,10 @@ const Player = () => {
             playTracks([
                 'sounds/bird.mp3',
                 'sounds/rain.mp3',
-                'sounds/ocean.mp3'
+                'sounds/ocean waves.mp3',
+                'sounds/ocean.mp3',
+                'sounds/birds in river.mp3',
+                'sounds/rain in forest.mp3'
             ]);
         }
     };
@@ -29,7 +32,10 @@ const Player = () => {
             playTracks([
                 'sounds/bird.mp3',
                 'sounds/rain.mp3',
-                'sounds/ocean.mp3'
+                'sounds/ocean waves.mp3',
+                'sounds/ocean.mp3',
+                'sounds/birds in river.mp3',
+                'sounds/rain in forest.mp3'
             ]);
         } else {
             playTracks(currentTracks);

@@ -1,12 +1,72 @@
-.Player-container{
+/* Player.css */
+
+.Player-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     height: 10vh;
     background-color: green;
     color: white;
     max-width: 85vw;
-    justify-content: center;
-    text-align: center;
+    margin: auto;
+    padding: 10px;
 }
 
-.player-buttons{
-    margin-top: 1%;
+.name-container {
+    flex: 1;
+    /* Take one-third of the available space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-button-container {
+    flex: 1;
+    /* Take one-third of the available space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.volume-container {
+    flex: 1;
+    /* Take one-third of the available space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Additional styling for buttons and icons */
+.player-buttons {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.volume-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.volume-slider {
+    width: 100px;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: #ccc;
+    outline: none;
+    border-radius: 5px;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #4caf50;
+    cursor: pointer;
+    border-radius: 50%;
 }

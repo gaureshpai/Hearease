@@ -3,9 +3,7 @@
 @tailwind utilities;
 
 .playlist-container {
-  margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #282c34;
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -13,6 +11,7 @@
   justify-content: center;
   height: 80vh;
   max-width: 85vw;
+  overflow-y: scroll;
 }
 
 h2 {
@@ -65,4 +64,9 @@ h2 {
 
 .play-pause-button:hover {
   background-color: #21a1f1;
+}
+@media(min-wdith:348px){
+  .playlist-container{
+    height: auto;
+  }
 }

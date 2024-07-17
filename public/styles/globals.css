@@ -4,8 +4,8 @@
 
 body {
     margin: 0;
-    overflow: hidden;
     font-family: 'Inter', sans-serif;
+    overflow: hidden;
 }
 
 .mainbody {
@@ -20,22 +20,16 @@ body {
 }
 
 .mainbodyy {
-    width: 100%;
-    overflow-y: scroll;
-    overflow-x: scroll;
-    flex-direction: row;
     display: flex;
+    flex-direction: column;
     min-height: 80vh;
-    width: 85vw;
-}
-
-.download-container {
-    padding: 20px;
-    text-align: center;
-}
-
-.download-button {
-    margin-top: 20px;
+    height: 80vh;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 2rem;
+    margin: auto;
+    background-color: #f8f9fa;
+    justify-content: space-around;
 }
 
 .Player-container {
@@ -55,19 +49,59 @@ body {
 
 .about {
     margin-bottom: 20px;
+    margin: auto;
+    padding: 2rem;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
 }
 
 .about h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 .about p {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 1.25rem;
+    line-height: 1.6;
 }
 
-.tinnitus-image{
-    border: 2px solid black;
-    min-width: 300px;
+.tinnitus-image {
+    border: 1px solid #000000;
+    border-radius: 4px;
+    height: auto;
+    max-width: 200px;
+}
+
+.reference {
+    text-align: center;
+}
+
+.photo-and-reference {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    left: auto;  /* Remove left positioning */
+    right: 0;    /* Position on the right */
+
+    @media (min-width: 768px) {
+        margin-bottom: 0;
+    }
+}
+
+
+.text-lg {
+    flex-basis: 100%;
+    max-width: 100%;
+
+    @media (min-width: 768px) {
+        flex-basis: 70%;
+        max-width: 70%;
+    }
 }

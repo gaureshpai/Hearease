@@ -1,24 +1,29 @@
-.Navbar{
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.Navbar {
     background-color: black;
-    top: 0%;
-    left: 0%;
-    right: 0%;
-    width: 100vw;
-    height: 10vh;
     color: white;
-    justify-content:space-between;
-    display: flex;
     padding: 10px;
     font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.heading{
-    color:white;
-    font-size:2em;
+.heading {
+    font-size: 2em;
 }
 
-.download{
-    color:white;
+.download {
     font-size: 1em;
-    margin-top: 1%;
+    border-radius: 50px;
+    background: #524b4b;
+}
+
+.download:hover {
+    font-size: 1em;
+    border-radius: 50px;
+    background: #644545;
 }

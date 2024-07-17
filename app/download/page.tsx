@@ -8,7 +8,7 @@ const DownloadPage = () => {
             <h1>Download Our Application</h1>
             <p>Click the button below to download the application.</p>
             <div className='download-button'>
-                <a href="/hearease.apk" download>Download Now</a>
+                <a href="/Hearease.apk" download>Download Now</a>
             </div>
         </div>
     );
