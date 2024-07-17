@@ -6,7 +6,7 @@ interface TrackProps {
 }
 
 const Track: React.FC<TrackProps> = ({ track }) => {
-  const { playTrack, pauseTrack, isPlaying, currentTracks, setVolume } = useAudio();
+  const { playTrack, pauseTrack, isPlaying, currentTracks, setTrackVolume } = useAudio();
   const [volume, setLocalVolume] = useState(100);
   const [isMuted, setIsMuted] = useState(false);
   const [prevVolume, setPrevVolume] = useState(100);
@@ -28,18 +28,18 @@ const Track: React.FC<TrackProps> = ({ track }) => {
   const handleVolumeChange = (e: any) => {
     const newVolume = parseInt(e.target.value);
     setLocalVolume(newVolume);
-    setVolume(newVolume / 100);
+    setTrackVolume(track, newVolume / 100);
     setIsMuted(false);
   };
 
   const toggleMute = () => {
     if (isMuted) {
-      setVolume(prevVolume / 100);
+      setTrackVolume(track, prevVolume / 100);
       setIsMuted(false);
       setLocalVolume(prevVolume);
     } else {
       setPrevVolume(volume);
-      setVolume(0);
+      setTrackVolume(track, 0);
       setIsMuted(true);
       setLocalVolume(0);
     }
