@@ -30,4 +30,6 @@
   align-items: center;
   text-align: center;
   max-width: 85vw;
+  height: 80vh;
+  display: flex;
 }

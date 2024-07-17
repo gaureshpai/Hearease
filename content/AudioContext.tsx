@@ -1,4 +1,5 @@
 'use client'
+
 import React, { createContext, useState, useContext, useRef } from 'react';
 
 interface AudioContextProps {
@@ -10,6 +11,7 @@ interface AudioContextProps {
     playTracks: (tracks: string[]) => void;
     pauseTrack: (track: string) => void;
     pauseTracks: () => void;
+    setTrackVolume: (track: string, volume: number) => void;
     setVolume: (volume: number) => void;
 }
 
@@ -66,6 +68,13 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         setCurrentTrack(null);
     };
 
+    const setTrackVolume = (track: string, volume: number) => {
+        const audio = audioRefs.current.get(track);
+        if (audio) {
+            audio.volume = volume;
+        }
+    };
+
     const setVolume = (volume: number) => {
         audioRefs.current.forEach((audio) => {
             audio.volume = volume;
@@ -74,7 +83,7 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
     return (
         <AudioContext.Provider
-            value={{ currentTracks, currentTrack, isPlaying, isAllPlaying, playTrack, playTracks, pauseTrack, pauseTracks, setVolume }}
+            value={{ currentTracks, currentTrack, isPlaying, isAllPlaying, playTrack, playTracks, pauseTrack, pauseTracks, setTrackVolume, setVolume }}
         >
             {children}
         </AudioContext.Provider>

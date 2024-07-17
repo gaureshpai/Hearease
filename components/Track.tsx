@@ -6,10 +6,10 @@ interface TrackProps {
 }
 
 const Track: React.FC<TrackProps> = ({ track }) => {
-  const { playTrack, pauseTrack, isPlaying, currentTracks, setVolume } = useAudio();
-  const [volume, setLocalVolume] = useState(50);
+  const { playTrack, pauseTrack, isPlaying, currentTracks, setTrackVolume } = useAudio();
+  const [volume, setLocalVolume] = useState(100);
   const [isMuted, setIsMuted] = useState(false);
-  const [prevVolume, setPrevVolume] = useState(50);
+  const [prevVolume, setPrevVolume] = useState(100);
 
   const handlePlayPause = () => {
     if (currentTracks.includes(track)) {
@@ -28,18 +28,18 @@ const Track: React.FC<TrackProps> = ({ track }) => {
   const handleVolumeChange = (e: any) => {
     const newVolume = parseInt(e.target.value);
     setLocalVolume(newVolume);
-    setVolume(newVolume / 100);
+    setTrackVolume(track, newVolume / 100);
     setIsMuted(false);
   };
 
   const toggleMute = () => {
     if (isMuted) {
-      setVolume(prevVolume / 100);
+      setTrackVolume(track, prevVolume / 100);
       setIsMuted(false);
       setLocalVolume(prevVolume);
     } else {
       setPrevVolume(volume);
-      setVolume(0);
+      setTrackVolume(track, 0);
       setIsMuted(true);
       setLocalVolume(0);
     }
@@ -49,8 +49,12 @@ const Track: React.FC<TrackProps> = ({ track }) => {
     <div className="track-item p-2">
       <p>{cleanTrackName(track)}</p>
       <div className="flex items-center">
-        <button className="play-button bg-blue-500 text-white p-2 rounded mr-2" onClick={handlePlayPause}>
-          {currentTracks.includes(track) ? 'Pause' : 'Play'}
+        <button className="play-button p-1 rounded mr-2" onClick={handlePlayPause}>
+          <img
+            src={`/images/${currentTracks.includes(track) ? '⏸' : '▶'}.png`}
+            alt={currentTracks.includes(track) ? 'Pause' : 'Play'}
+            className="w-6 h-6"
+          />
         </button>
         <img
           src={`/images/${isMuted ? 'mute.png' : 'volume.png'}`}

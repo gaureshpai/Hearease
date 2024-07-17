@@ -14,22 +14,24 @@ const About = () => {
     Fortunately, most services offer a free option or free trial period, which allows you to explore the services and quality of sound before subscribing.`;
 
     const formattedText = aboutText.split('. ').map((sentence, index) => (
-        <div key={index}>
+        <div key={index} className="my-2">
             {sentence.trim()}{index < aboutText.split('. ').length - 1 && '.'}
         </div>
     ));
 
     return (
-        <div className='mainbodyy'>
-            <div className='about'>
-                <h1>About Tinnitus</h1>
-                {formattedText}
-            </div>
-            <div className='photo-and-reference'>
-                <img src='/images/Tinnitus.jpg' alt='Tinnitus' className='tinnitus-image' />
-                <p className='reference'>
-                    Source: <a href='https://www.ata.org/about-tinnitus/sound-therapy/' target='_blank' rel='noopener noreferrer'>Sound Therapy</a>
-                </p>
+        <div className="mainbodyy bg-gray-900 p-8 overflow-auto">
+            <h1 className="text-4xl mb-4 text-white">About Tinnitus</h1>
+            <div className="about mb-8 flex flex-wrap">
+                <div className="text-lg leading-relaxed flex-basis-full md:flex-basis-70 md:max-w-70">
+                    {formattedText}
+                </div>
+                <div className="photo-and-reference md:ml-auto md:mr-0">
+                    <img src="/images/tin.jpg" alt="Tinnitus" className="tinnitus-image mb-2" />
+                    <p className="reference text-sm">
+                        Source: <a href="https://www.ata.org/about-tinnitus/sound-therapy/" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">Sound Therapy</a>
+                    </p>
+                </div>
             </div>
         </div>
     );
