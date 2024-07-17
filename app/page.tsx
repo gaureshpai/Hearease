@@ -1,8 +1,10 @@
 const Home = () => {
 
   return (
-    <div>
-
+    <div className="mainbody">
+      {/*home page box*/
+      <h1>HEARease</h1>
+      }
     </div>
   );
 };

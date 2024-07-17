@@ -6,9 +6,12 @@ body {
     margin: 0;
     overflow: hidden;
     font-family: 'Inter', sans-serif;
+    padding: auto;
+   
 }
 
 .mainbody {
+   
     display: flex;
     flex-direction: row;
     height: 100vh;
@@ -17,15 +20,17 @@ body {
 .children {
     min-height: 80vh;
     flex-grow: 1;
+   
 }
 
 .mainbodyy {
+   
     width: 100%;
     overflow-y: scroll;
     overflow-x: scroll;
     flex-direction: row;
     display: flex;
-    min-height: 80vh;
+    height: 70vh;
     width: 85vw;
 }
 
@@ -60,6 +65,9 @@ body {
 .about h1 {
     font-size: 2rem;
     margin-bottom: 10px;
+    color: #551515;
+    
+    font-style: oblique;
 }
 
 .about p {

@@ -24,13 +24,14 @@ const About = () => {
             <div className='about'>
                 <h1>About Tinnitus</h1>
                 {formattedText}
-            </div>
-            <div className='photo-and-reference'>
+                <div className='photo-and-reference'>
                 <img src='/images/Tinnitus.jpg' alt='Tinnitus' className='tinnitus-image' />
                 <p className='reference'>
                     Source: <a href='https://www.ata.org/about-tinnitus/sound-therapy/' target='_blank' rel='noopener noreferrer'>Sound Therapy</a>
                 </p>
             </div>
+            </div>
+            
         </div>
     );
 };

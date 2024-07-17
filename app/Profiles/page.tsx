@@ -13,6 +13,16 @@ const Profiles = () => {
       linkedin: 'https://www.linkedin.com/in/harshitha2007/',
       github: 'https://github.com/shirha20'
     },
+    {
+      name:'Paandiya Varshini',
+      linkdin:'',
+      github:''
+    },
+    {
+      name:'Karthika',
+      linkdin:'',
+      github:''
+    }
   ];
 
   return (
