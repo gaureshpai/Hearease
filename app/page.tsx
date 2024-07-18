@@ -10,7 +10,7 @@ const Home = () => {
           HearEase is a comprehensive solution designed to help individuals manage tinnitus through soothing sounds and valuable information. Our platform offers a range of features to improve your experience and provide relief.
         </p>
         <h2 className="text-2xl font-bold mb-3 text-white">Features</h2>
-        <ul className="text-lg mb-8 text-white list-disc list-inside">
+        <ul className="text-lg mb-8 text-white list-disc list-inside text-center">
           <li><strong>About Tinnitus:</strong> Learn about tinnitus, its causes, symptoms, and effective management strategies.</li>
           <li><strong>Music Player:</strong> Access a variety of soothing sounds and music tracks to help mask tinnitus and provide relief.</li>
           <li><strong>View Contributors:</strong> Meet the team behind HearEase and explore their profiles on LinkedIn and GitHub.</li>
