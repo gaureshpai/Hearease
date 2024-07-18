@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     width: 15vw;
-    background-color: blue;
     max-height: 90vh;
 }
 
