@@ -11,7 +11,10 @@ const tracks = [
   'sounds/ocean waves.mp3',
   'sounds/ocean.mp3',
   'sounds/birds in river.mp3',
-  'sounds/rain in forest.mp3'
+  'sounds/rain in forest.mp3',
+  'sounds/birds humming.mp3',
+  'sounds/thunder.mp3',
+  'sounds/fire.mp3'
 ];
 
 const Playlist = () => {
@@ -26,21 +29,22 @@ const Playlist = () => {
   };
 
   return (
-    <div className="playlist-container bg-gray-900 text-white py-4 px-2 md:px-8">
-      <h2 className="text-3xl font-bold text-center mb-4">Hearease Player</h2>
-      <div className="flex justify-center mb-4">
-        <button onClick={handlePlayAll} className="play-all-button bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
+    <div className="playlist-container bg-gray-900 text-white py-8 px-4 md:px-16">
+      <h2 className="text-4xl font-bold text-center mb-6">Hearease Player</h2>
+      <div className="flex justify-center mb-6">
+        <button onClick={handlePlayAll} className="play-all-button bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg">
           {isAllPlaying ? 'Pause All' : 'Play All'}
         </button>
       </div>
-      <ul className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <ul className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {tracks.map((track, index) => (
-          <li key={index} className="individual bg-gray-800 rounded-lg overflow-hidden shadow-md">
+          <li key={index} className="individual bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
             <Track track={track} />
           </li>
         ))}
       </ul>
     </div>
+
   );
 };
 

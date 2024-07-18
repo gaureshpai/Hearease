@@ -17,6 +17,7 @@ body {
 .children {
     min-height: 80vh;
     flex-grow: 1;
+    overflow-y: auto;
 }
 
 .mainbodyy {
@@ -29,6 +30,10 @@ body {
     padding: 2rem;
     margin: auto;
     justify-content: space-around;
+}
+
+.content{
+    overflow-y: scroll;
 }
 
 .Player-container {
@@ -92,7 +97,6 @@ body {
         margin-bottom: 0;
     }
 }
-
 
 .text-lg {
     flex-basis: 100%;
