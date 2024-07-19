@@ -8,8 +8,8 @@ const Sidebar = () => {
             <div className="flex flex-col space-y-4 p-4">
                 <div className="button"><Link href="/">Home</Link></div>
                 <div className="button"><Link href="/About">About Tinnitus</Link></div>
-                <div className="button"><Link href="/Music-Player">Music Player</Link></div>
-                <div className="button"><Link href="/Profiles">View all contributors</Link></div>
+                <div className="button"><Link href="/Hearplay">Hearplay</Link></div>
+                <div className="button"><Link href="/Contributors">View all contributors</Link></div>
             </div>
         </div>
     );

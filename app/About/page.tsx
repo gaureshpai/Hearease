@@ -20,13 +20,13 @@ const About = () => {
     ));
 
     return (
-        <div className="mainbodyy bg-gray-900 p-8 overflow-auto">
+        <div className="mainbodyy bg-gray-900 p-8 overflow-auto md:overflow-x-hidden">
             <h1 className="text-4xl mb-4 text-white">About Tinnitus</h1>
-            <div className="about mb-8 flex flex-wrap">
+            <div className="about mb-8 flex flex-wrap md:flex-col">
                 <div className="text-lg leading-relaxed flex-basis-full md:flex-basis-70 md:max-w-70">
                     {formattedText}
                 </div>
-                <div className="photo-and-reference md:ml-auto md:mr-0">
+                <div className="photo-and-reference md:ml-auto">
                     <img src="/images/tin.jpg" alt="Tinnitus" className="tinnitus-image mb-2" />
                     <p className="reference text-sm">
                         Source: <a href="https://www.ata.org/about-tinnitus/sound-therapy/" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">Sound Therapy</a>
