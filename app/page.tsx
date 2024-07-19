@@ -20,10 +20,10 @@ const Home = () => {
           <Link href="/About" legacyBehavior>
             <a className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">About Tinnitus</a>
           </Link>
-          <Link href="/Music-Player" legacyBehavior>
+          <Link href="/Hearplay" legacyBehavior>
             <a className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Music Player</a>
           </Link>
-          <Link href="/Profiles" legacyBehavior>
+          <Link href="/Contributors" legacyBehavior>
             <a className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded">View Contributors</a>
           </Link>
           <Link href="/download" legacyBehavior>

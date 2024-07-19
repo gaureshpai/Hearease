@@ -34,6 +34,7 @@ body {
 
 .content{
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .Player-container {
@@ -62,7 +63,7 @@ body {
     flex-direction: column;
     gap: 2rem;
 
-    @media (min-width: 768px) {
+    @media (min-width: 300px) {
         flex-direction: row;
     }
 }
@@ -95,6 +96,9 @@ body {
 
     @media (min-width: 768px) {
         margin-bottom: 0;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
     }
 }
 

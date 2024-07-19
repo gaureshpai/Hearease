@@ -29,7 +29,7 @@ const Playlist = () => {
   };
 
   return (
-    <div className="playlist-container bg-gray-900 text-white py-8 px-4 md:px-16">
+    <div className="playlist-container bg-gray-900 text-white py-8 px-4 md:px-16 md:overflow-x-hidden md:overflow-y-scroll">
       <h2 className="text-4xl font-bold text-center mb-6">Hearease Player</h2>
       <div className="flex justify-center mb-6">
         <button onClick={handlePlayAll} className="play-all-button bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg">
