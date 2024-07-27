@@ -5,7 +5,7 @@ import '@/public/styles/sidebar.css'
 
 const Sidebar = () => {
     return (
-        <aside className="bg-green-800 text-white md:w-64 md:h-screen md:overflow-y-auto md:flex-shrink-0 transition-all duration-300 ease-in-out">
+        <aside className="bg-green-800 text-white md:w-64 md:h-[90vh] md:overflow-y-auto md:flex-shrink-0 transition-all duration-300 ease-in-out">
             <nav className="flex md:flex-col p-4  justify-center space-x-4 md:space-x-0 md:space-y-2 overflow-x-auto md:overflow-x-visible">
                 <SidebarLink href="/" text="Home" icon={<FaHome />} />
                 <SidebarLink href="/About" text="About Tinnitus" icon={<FaInfoCircle />} />
