@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="md:overflow-y">
+      <body className="lg:overflow-y">
         <Navbar />
         <div className="mainbody overflow-auto">
           <div className="sidebar">

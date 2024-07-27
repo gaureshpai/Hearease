@@ -11,10 +11,10 @@ const Home = () => {
         </p>
         <h2 className="text-2xl font-bold mb-3 text-white">Features</h2>
         <ul className="text-lg mb-8 text-white list-disc list-inside text-center">
-          <li className='md:min-w-[60vw]'><strong>About Tinnitus:</strong> Learn about tinnitus, its causes, symptoms, and effective management strategies.</li>
-          <li className='md:min-w-[60vw]'><strong>Music Player:</strong> Access a variety of soothing sounds and music tracks to help mask tinnitus and provide relief.</li>
-          <li className='md:min-w-[60vw]'><strong>View Contributors:</strong> Meet the team behind HearEase and explore their profiles on LinkedIn and GitHub.</li>
-          <li className='md:min-w-[60vw]'><strong>Download App:</strong> Easily download our application for convenient access to all features on the go.</li>
+          <li className='lg:min-w-[60vw]'><strong>About Tinnitus:</strong> Learn about tinnitus, its causes, symptoms, and effective management strategies.</li>
+          <li className='lg:min-w-[60vw]'><strong>Music Player:</strong> Access a variety of soothing sounds and music tracks to help mask tinnitus and provide relief.</li>
+          <li className='lg:min-w-[60vw]'><strong>View Contributors:</strong> Meet the team behind HearEase and explore their profiles on LinkedIn and GitHub.</li>
+          <li className='lg:min-w-[60vw]'><strong>Download App:</strong> Easily download our application for convenient access to all features on the go.</li>
         </ul>
         <div className="flex flex-wrap justify-center gap-4">
           <Link href="/About" legacyBehavior>

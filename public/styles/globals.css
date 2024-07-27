@@ -12,7 +12,8 @@ body {
     display: flex;
     flex-direction: row;
     height: 100vh;
-    @media (max-width: 768px) {
+
+    @media (max-width: 1024px) {
         flex-direction: column;
     }
 }
@@ -20,8 +21,9 @@ body {
 .children {
     height: 80vh;
     flex-grow: 1;
-    overflow-y: auto;
-    @media (max-width: 768px) {
+    overflow-y: scroll;
+
+    @media (max-width: 1024px) {
         height: 75vh;
     }
 }
@@ -31,14 +33,14 @@ body {
     flex-direction: column;
     height: 80vh;
     max-height: 80vh;
-    overflow-y: hidden;
+    overflow: hidden;
     padding: 2rem;
     margin: auto;
     justify-content: space-around;
 }
 
 .content{
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .Player-container {
@@ -50,7 +52,8 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    @media (max-width: 768px) {
+    
+    @media (max-width: 1024px) {
         width: 100vw;
     }
 }
@@ -101,7 +104,7 @@ body {
     left: auto; 
     right: 0;  
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
         margin-bottom: 0;
         justify-content: center;
         text-align: center;
@@ -113,7 +116,7 @@ body {
     flex-basis: 100%;
     max-width: 100%;
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
         flex-basis: 70%;
         max-width: 70%;
     }

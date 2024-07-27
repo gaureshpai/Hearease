@@ -4,8 +4,8 @@ import '@/public/styles/Navbar.css'
 
 const Navbar = () => {
   return (
-    <nav className="bg-black text-white w-full h-[10vh] py-4 px-6 md:px-8 lg:px-12">
-      <div className="container mx-auto flex flex-col sm:flex-row md:justify-between items-center justify-center">
+    <nav className="bg-black text-white w-full h-[10vh] py-4 px-6 lg:px-8 lg:px-12">
+      <div className="container mx-auto flex flex-col sm:flex-row lg:justify-between items-center justify-center">
         <div className="heading text-4xl font-bold mb-4 sm:mb-0">
           <Link href="/" className="hover:text-gray-300 transition duration-300">
             HearEase

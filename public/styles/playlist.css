@@ -10,10 +10,11 @@
   align-items: center;
   justify-content: center;
   max-width: 85vw;
-  overflow-y: scroll;
-    @media (max-width: 768px) {
-      min-width: 100vw;
-    }
+
+  @media (max-width: 1024px) {
+    min-width: 100vw;
+    height: auto;
+  }
 }
 
 h2 {
@@ -66,9 +67,4 @@ h2 {
 
 .play-pause-button:hover {
   background-color: #21a1f1;
-}
-@media(min-wdith:348px){
-  .playlist-container{
-    height: auto;
-  }
 }
