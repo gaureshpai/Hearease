@@ -12,28 +12,32 @@ body {
     display: flex;
     flex-direction: row;
     height: 100vh;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 }
 
 .children {
-    min-height: 80vh;
+    height: 80vh;
     flex-grow: 1;
     overflow-y: auto;
+    @media (max-width: 768px) {
+        height: 75vh;
+    }
 }
 
 .mainbodyy {
     display: flex;
     flex-direction: column;
-    min-height: 80vh;
     height: 80vh;
     max-height: 80vh;
-    overflow-y: auto;
+    overflow-y: hidden;
     padding: 2rem;
     margin: auto;
     justify-content: space-around;
 }
 
 .content{
-    overflow-y: scroll;
     overflow-x: hidden;
 }
 
@@ -41,11 +45,14 @@ body {
     height: 10vh;
     background-color: green;
     color: white;
-    width: 90vw;
+    width: 85vw;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    @media (max-width: 768px) {
+        width: 100vw;
+    }
 }
 
 .player-buttons {

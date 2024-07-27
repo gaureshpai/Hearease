@@ -32,4 +32,7 @@
   max-width: 85vw;
   height: 80vh;
   display: flex;
+  @media (max-width: 768px) {
+      min-width: 100vw;
+    }
 }
