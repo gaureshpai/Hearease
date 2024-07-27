@@ -73,9 +73,9 @@ const Player = () => {
             <div className='name-container'>
                 {currentTracks.length > 0 && (
                     <div className='playing-tracks'>
-                        <a>Currently Playing:</a>
+                        <a>Currently Playing: </a>
                         {currentTracks.map((track, index) => (
-                            <a key={index}>{track.split('/').pop()?.replace('.mp3', '')}   </a>
+                            <a key={index}>{track.split('/').pop()?.replace('.mp3', '')}</a>
                         ))}
                     </div>
                 )}

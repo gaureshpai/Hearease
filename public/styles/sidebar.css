@@ -3,6 +3,10 @@
     flex-direction: column;
     width: 15vw;
     max-height: 90vh;
+    @media (max-width:768px){
+        max-height: 10vh;
+        width: 100vw;
+    }
 }
 
 .button-container{
