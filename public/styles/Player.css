@@ -14,7 +14,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    width: 20vw;
+    color: white;
+    position: relative;
 }
+
+.playing-tracks {
+    white-space: nowrap;
+    display: inline-block;
+    animation: slide 10s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
 
 .player-button-container {
     flex: 1;

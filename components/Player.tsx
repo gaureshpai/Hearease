@@ -38,7 +38,10 @@ const Player = () => {
                 'sounds/ocean waves.mp3',
                 'sounds/ocean.mp3',
                 'sounds/birds in river.mp3',
-                'sounds/rain in forest.mp3'
+                'sounds/rain in forest.mp3',
+                'sounds/birds humming.mp3',
+                'sounds/thunder.mp3',
+                'sounds/fire.mp3'
             ]);
         } else {
             playTracks(currentTracks);
@@ -70,9 +73,9 @@ const Player = () => {
             <div className='name-container'>
                 {currentTracks.length > 0 && (
                     <div className='playing-tracks'>
-                        <a>Currently Playing:</a>
+                        <a>Currently Playing: </a>
                         {currentTracks.map((track, index) => (
-                            <a key={index}>{track.split('/').pop()?.replace('.mp3', '')}   </a>
+                            <a key={index}>-{track.split('/').pop()?.replace('.mp3', '')}-</a>
                         ))}
                     </div>
                 )}

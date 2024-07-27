@@ -28,7 +28,7 @@ const Profiles = () => {
     return (
         <div className='profile-container flex flex-wrap justify-center items-center bg-gray-900 p-8 overflow-auto'>
             {profiles.map((profile, index) => (
-                <div key={index} className="max-w-md rounded overflow-hidden shadow-lg bg-white m-4">
+                <div key={index} className="max-w-lg rounded overflow-hidden shadow-lg bg-white m-4">
                     <div className="px-6 py-4">
                         <div className="font-bold text-xl mb-2">{profile.name}</div>
                         <div className="mb-4">
