@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Home = () => {
   return (
-    <div className="bg-gray-900 min-h-screen flex flex-col items-center justify-center p-8">
+    <div className="bg-gray-900 min-h-screen flex flex-col items-center justify-center p-8 text-center">
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="text-4xl font-bold mb-4 text-white">Welcome to HearEase</h1>
         <p className="text-xl mb-6 text-white">
@@ -11,10 +11,10 @@ const Home = () => {
         </p>
         <h2 className="text-2xl font-bold mb-3 text-white">Features</h2>
         <ul className="text-lg mb-8 text-white list-disc list-inside text-center">
-          <li><strong>About Tinnitus:</strong> Learn about tinnitus, its causes, symptoms, and effective management strategies.</li>
-          <li><strong>Music Player:</strong> Access a variety of soothing sounds and music tracks to help mask tinnitus and provide relief.</li>
-          <li><strong>View Contributors:</strong> Meet the team behind HearEase and explore their profiles on LinkedIn and GitHub.</li>
-          <li><strong>Download App:</strong> Easily download our application for convenient access to all features on the go.</li>
+          <li className='md:min-w-[60vw]'><strong>About Tinnitus:</strong> Learn about tinnitus, its causes, symptoms, and effective management strategies.</li>
+          <li className='md:min-w-[60vw]'><strong>Music Player:</strong> Access a variety of soothing sounds and music tracks to help mask tinnitus and provide relief.</li>
+          <li className='md:min-w-[60vw]'><strong>View Contributors:</strong> Meet the team behind HearEase and explore their profiles on LinkedIn and GitHub.</li>
+          <li className='md:min-w-[60vw]'><strong>Download App:</strong> Easily download our application for convenient access to all features on the go.</li>
         </ul>
         <div className="flex flex-wrap justify-center gap-4">
           <Link href="/About" legacyBehavior>
