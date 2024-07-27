@@ -9,9 +9,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 80vh;
   max-width: 85vw;
   overflow-y: scroll;
+    @media (max-width: 768px) {
+      min-width: 100vw;
+    }
 }
 
 h2 {
