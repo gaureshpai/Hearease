@@ -22,13 +22,13 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar />
-        <div className="mainbody">
+        <div className="mainbody overflow-auto">
           <div className="sidebar">
             <Sidebar />
           </div>
-          <div className="content">
+          <div className="content overflow-auto">
             <AudioProvider>
-              <div className="children">
+              <div className="children overflow-auto">
                 {children}
               </div>
               <Player/>
