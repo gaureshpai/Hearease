@@ -38,7 +38,10 @@ const Player = () => {
                 'sounds/ocean waves.mp3',
                 'sounds/ocean.mp3',
                 'sounds/birds in river.mp3',
-                'sounds/rain in forest.mp3'
+                'sounds/rain in forest.mp3',
+                'sounds/birds humming.mp3',
+                'sounds/thunder.mp3',
+                'sounds/fire.mp3'
             ]);
         } else {
             playTracks(currentTracks);
