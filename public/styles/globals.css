@@ -4,10 +4,8 @@
 
 body {
     margin: 0;
-    overflow: hidden;
     font-family: 'Inter', sans-serif;
-    padding: auto;
-   
+    overflow: hidden;
 }
 
 .mainbody {
@@ -15,43 +13,50 @@ body {
     display: flex;
     flex-direction: row;
     height: 100vh;
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+    }
 }
 
 .children {
-    min-height: 80vh;
+    height: 80vh;
     flex-grow: 1;
-   
+    overflow-y: scroll;
+
+    @media (max-width: 1024px) {
+        height: 75vh;
+    }
 }
 
 .mainbodyy {
-   
-    width: 100%;
-    overflow-y: scroll;
-    overflow-x: scroll;
-    flex-direction: row;
     display: flex;
-    height: 70vh;
-    width: 85vw;
+    flex-direction: column;
+    height: 80vh;
+    max-height: 80vh;
+    overflow: hidden;
+    padding: 2rem;
+    margin: auto;
+    justify-content: space-around;
 }
 
-.download-container {
-    padding: 20px;
-    text-align: center;
-}
-
-.download-button {
-    margin-top: 20px;
+.content{
+    overflow: hidden;
 }
 
 .Player-container {
     height: 10vh;
     background-color: green;
     color: white;
-    width: 90vw;
+    width: 85vw;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    
+    @media (max-width: 1024px) {
+        width: 100vw;
+    }
 }
 
 .player-buttons {
@@ -60,22 +65,64 @@ body {
 
 .about {
     margin-bottom: 20px;
+    margin: auto;
+    padding: 2rem;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @media (min-width: 300px) {
+        flex-direction: row;
+    }
 }
 
 .about h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: #551515;
-    
-    font-style: oblique;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 .about p {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 1.25rem;
+    line-height: 1.6;
 }
 
-.tinnitus-image{
-    border: 2px solid black;
-    min-width: 300px;
+.tinnitus-image {
+    border: 1px solid #000000;
+    border-radius: 4px;
+    height: auto;
+    max-width: 200px;
+}
+
+.reference {
+    text-align: center;
+}
+
+.photo-and-reference {
+    margin-bottom: 2rem;
+    left: auto; 
+    right: 0;  
+
+    @media (min-width: 1024px) {
+        margin-bottom: 0;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+.text-lg {
+    flex-basis: 100%;
+    max-width: 100%;
+
+    @media (min-width: 1024px) {
+        flex-basis: 70%;
+        max-width: 70%;
+    }
+}
+
+.home-container{
+    height: 80vh;
 }

@@ -20,15 +20,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="lg:overflow-y">
         <Navbar />
-        <div className="mainbody">
+        <div className="mainbody overflow-auto">
           <div className="sidebar">
             <Sidebar />
           </div>
-          <div className="content">
+          <div className="content overflow-auto">
             <AudioProvider>
-              <div className="children">
+              <div className="children overflow-auto">
                 {children}
               </div>
               <Player/>

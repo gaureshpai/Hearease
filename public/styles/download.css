@@ -9,9 +9,13 @@
     justify-content: center;
     height: 80vh;
     text-align: center;
-    background-color:aquamarine;
+    background-color:rgb(66, 61, 61);
     padding: 20px;
     color: black;
+
+    @media (max-width: 1024px) {
+        max-height: 75vh;
+    }
 }
 
 .download-container h1 {
@@ -31,8 +35,8 @@
     padding: 12px 24px;
     font-size: 1.2rem;
     color: #000000;
-    background-color: white;
-    border-radius: 8px;
+    border-radius: 50px;
+    background: #ffffff;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
