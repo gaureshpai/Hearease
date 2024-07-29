@@ -32,12 +32,12 @@ const Profiles = () => {
                     <div className="px-6 py-4">
                         <div className="font-bold text-xl mb-2">{profile.name}</div>
                         <div className="mb-4">
-                            <p className="text-sm text-gray-700 mb-2">LinkedIn:</p>
-                            <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className='text-blue-500 hover:underline'>linkedin link</a>
+                            <p className="text-base text-gray-700 mb-2">LinkedIn:<a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className='text-blue-500 hover:underline'> link</a></p>
+                            
                         </div>
                         <div>
-                            <p className="text-sm text-gray-700 mb-2">GitHub:</p>
-                            <a href={profile.github} target="_blank" rel="noopener noreferrer" className='text-blue-500 hover:underline'>github link</a>
+                            <p className="text-base text-gray-700 mb-2">GitHub:<a href={profile.github} target="_blank" rel="noopener noreferrer" className='text-blue-500 hover:underline'>link</a></p>
+                            
                         </div>
                     </div>
                 </div>

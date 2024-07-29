@@ -29,7 +29,7 @@ const About = () => {
                 <div className="photo-and-reference lg:ml-auto">
                     <img src="/images/tin.jpg" alt="Tinnitus" className="tinnitus-image mb-2" />
                     <p className="reference text-sm">
-                        Source: <a href="https://www.ata.org/about-tinnitus/sound-therapy/" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">Sound Therapy</a>
+                        Source: <a href="https://www.ncoa.org/adviser/hearing-aids/tinnitus-hearing-aids/" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">Sound Therapy</a>
                     </p>
                 </div>
             </div>
