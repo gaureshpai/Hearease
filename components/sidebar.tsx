@@ -7,7 +7,7 @@ import '@/public/styles/sidebar.css'
 const Sidebar = () => {
     return (
         <aside className="bg-green-800 text-white lg:w-64 lg:h-[90vh] lg:overflow-y-auto lg:flex-shrink-0 transition-all duration-300 ease-in-out">
-            <nav className="flex lg:flex-col p-4  justify-center space-x-4 lg:space-x-0 lg:space-y-2 overflow-x-auto lg:overflow-x-visible">
+            <nav className="flex lg:flex-col p-4  justify-center space-x-3 lg:space-x-0 lg:space-y-2 overflow-x-auto lg:overflow-x-visible">
                 <SidebarLink href="/" text="Home" icon={<FaHome />} />
                 <SidebarLink href="/About" text="About Tinnitus" icon={<FaInfoCircle />} />
                 <SidebarLink href="/Hearplay" text="Hearplay" icon={<FaHeadphones />} />
