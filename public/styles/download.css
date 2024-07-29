@@ -12,6 +12,10 @@
     background-color:rgb(66, 61, 61);
     padding: 20px;
     color: black;
+
+    @media (max-width: 1024px) {
+        max-height: 75vh;
+    }
 }
 
 .download-container h1 {
