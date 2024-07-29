@@ -14,7 +14,10 @@ const tracks = [
     'sounds/rain in forest.mp3',
     'sounds/birds humming.mp3',
     'sounds/thunder.mp3',
-    'sounds/fire.mp3'
+    'sounds/fire.mp3',
+    'sounds/deep healing.mp3',
+    'sounds/miracle.mp3',
+    'sounds/healing.mp3'
 ];
 
 const Playlist = () => {
