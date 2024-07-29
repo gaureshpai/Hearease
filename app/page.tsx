@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Home = () => {
   return (
-    <div className="bg-gray-900 min-h-[75vh] md:min-h-[80vh] flex flex-col items-center justify-center p-8 text-center">
+    <div className="bg-gray-900 min-h-[75vh] md:min-h-[80vh] flex flex-col items-center justify-center p-8 text-center" style={{ backgroundImage: 'url(images/background.png)'}}>
       <div className="flex flex-col mx-auto text-center">
         <h1 className=" text-5xl text-center w-[100%] font-extrabold mb-6 text-white">
           Welcome to HearEase
