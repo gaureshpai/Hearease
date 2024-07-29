@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { FaHome, FaInfoCircle, FaHeadphones, FaUsers, FaDownload } from 'react-icons/fa';
+import { AiOutlineHeart } from 'react-icons/ai';
 import '@/public/styles/sidebar.css'
 
 const Sidebar = () => {
@@ -10,6 +11,7 @@ const Sidebar = () => {
                 <SidebarLink href="/" text="Home" icon={<FaHome />} />
                 <SidebarLink href="/About" text="About Tinnitus" icon={<FaInfoCircle />} />
                 <SidebarLink href="/Hearplay" text="Hearplay" icon={<FaHeadphones />} />
+                <SidebarLink href="/Hearelax" text="Hearelax" icon={<AiOutlineHeart />} />
                 <SidebarLink href="/Contributors" text="Contributors" icon={<FaUsers />} />
                 <div className="lg:hidden"><SidebarLink href="/download" text="Download app" icon={<FaDownload />} /></div>
             </nav>
