@@ -1,13 +1,15 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
+import { useDevice } from './use-device';
 
 const DownloadPage = () => {
     const [deferredPrompt, setDeferredPrompt] = useState<Event | null>(null);
+    const { isMobile, isStandalone } = useDevice();
 
     useEffect(() => {
         const handleBeforeInstallPrompt = (e: Event) => {
-            // Prevent the mini-infobar from appearing
+            // Prevent the mini-infobar from appearing on desktop
             e.preventDefault();
             // Save the event so it can be triggered later
             setDeferredPrompt(e);
@@ -22,23 +24,52 @@ const DownloadPage = () => {
     }, []);
 
     const handleInstallClick = async () => {
-        if (deferredPrompt) {
-            const promptEvent = deferredPrompt as any;
-            // Show the install prompt
-            promptEvent.prompt();
-            // Wait for the user's response
-            const choiceResult = await promptEvent.userChoice;
-            if (choiceResult.outcome === 'accepted') {
-                console.log('PWA installation accepted');
-            } else {
-                console.log('PWA installation dismissed');
+        // Mobile devices (iOS)
+        if (isMobile && !isStandalone) {
+            // For iOS, provide instructions
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) &&
+                !(navigator as any).standalone &&
+                !window.navigator.userAgent.match(/CriOS/i);
+
+            if (isIOS) {
+                alert('To install the app:\n1. Tap the Share button\n2. Select "Add to Home Screen"');
+                return;
             }
-            // Clear the saved prompt event
-            setDeferredPrompt(null);
-        } else {
-            alert("The app cannot be installed. Make sure you're on a compatible browser.");
+
+            // For Android and other mobile platforms
+            if (deferredPrompt) {
+                const promptEvent = deferredPrompt as any;
+                try {
+                    await promptEvent.prompt();
+                    const choiceResult = await promptEvent.userChoice;
+
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('PWA installation accepted');
+                    } else {
+                        console.log('PWA installation dismissed');
+                    }
+
+                    setDeferredPrompt(null);
+                } catch (error) {
+                    console.error('Installation failed', error);
+                }
+            }
+        }
+        // Desktop or already standalone
+        else {
+            if (isStandalone) {
+                alert('The app is already installed.');
+                return;
+            }
+
+            alert("Please use your browser's install option or download from the app store.");
         }
     };
+
+    // Hide install button if already in standalone mode
+    if (isStandalone) {
+        return null;
+    }
 
     return (
         <div className='flex flex-col items-center justify-center text-center bg-gray-900 p-5 min-h-[80vh]'>
