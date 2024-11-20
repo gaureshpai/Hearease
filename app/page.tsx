@@ -34,9 +34,6 @@ const Home = () => {
           <Link href="/download" className="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-5 rounded transition duration-300">
               Download App
           </Link>
-          <Link href="/Contributors" className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-5 rounded transition duration-300">
-              View Contributors
-          </Link>
         </div>
       </div>
     </div>
