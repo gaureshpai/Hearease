@@ -51,7 +51,7 @@ const Track: React.FC<TrackProps> = ({ track }) => {
       <div className="flex items-center">
         <button className="play-button p-1 rounded mr-2" onClick={handlePlayPause}>
           <img
-            src={`/images/${currentTracks.includes(track) ? '⏸' : '▶'}.png`}
+            src={`/images/${currentTracks.includes(track) ? 'pause' : 'play'}.png`}
             alt={currentTracks.includes(track) ? 'Pause' : 'Play'}
             className="w-6 h-6"
           />

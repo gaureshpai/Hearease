@@ -1,18 +1,31 @@
-'use client'
+'use client';
 
 import React, { useState, useEffect } from 'react';
-import { useDevice } from './use-device';
 
 export default function DownloadPage() {
     const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
-    const { isMobile, isStandalone } = useDevice();
+    const [isMobile, setIsMobile] = useState(false);
+    const [isStandalone, setIsStandalone] = useState(false);
 
     useEffect(() => {
+        const checkStandalone = () => {
+            const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent) && (window.navigator as any).standalone;
+            const isPWA = window.matchMedia('(display-mode: standalone)').matches;
+
+            setIsStandalone(isIOS || isPWA);
+        };
+
+        const checkMobile = () => {
+            setIsMobile(/Mobi|Android/i.test(navigator.userAgent));
+        };
+
         const handleBeforeInstallPrompt = (e: Event) => {
             e.preventDefault();
             setDeferredPrompt(e);
         };
 
+        checkStandalone();
+        checkMobile();
         window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
 
         return () => {
@@ -22,7 +35,7 @@ export default function DownloadPage() {
 
     const handleInstallClick = async () => {
         if (isMobile) {
-            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !(window.navigator as any).standalone;
+            const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent) && !(window.navigator as any).standalone;
 
             if (isIOS) {
                 alert('To add to home screen:\n1. Tap the Share button\n2. Select "Add to Home Screen"');
