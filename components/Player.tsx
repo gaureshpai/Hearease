@@ -54,11 +54,11 @@ const Player = () => {
         }
     };
 
-    const handleVolumeChange = (e: any) => {
-        const newVolume = parseInt(e.target.value);
+    const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const newVolume = parseInt(e.target.value, 10);
         setLocalVolume(newVolume);
         setVolume(newVolume / 100);
-        setIsMuted(false);
+        setIsMuted(newVolume === 0);
     };
 
     const toggleMute = () => {
@@ -88,7 +88,7 @@ const Player = () => {
             </div>
             <div className='player-button-container'>
                 <button className='player-buttons' onClick={isAllPlaying ? handlePlayPauseAll : handlePlayPause}>
-                    <img src={`/images/${isAllPlaying || isPlaying ? '⏸' : '▶'}.png`} alt={isAllPlaying || isPlaying ? 'Pause All' : 'Play All'} />
+                    <img src={`/images/${isAllPlaying || isPlaying ? 'pause' : 'play'}.png`} alt={isAllPlaying || isPlaying ? 'Pause All' : 'Play All'} />
                 </button>
             </div>
             <div className='volume-container flex flex-row'>
