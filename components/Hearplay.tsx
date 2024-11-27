@@ -32,8 +32,8 @@ const Playlist = () => {
     };
 
     return (
-        <div className="playlist-container min-h-[80vh] bg-gray-900 text-white py-8 px-4 lg:px-16 lg:overflow-x-hidden">
-            <h2 className="text-4xl font-bold text-center mb-6">Hearease Player</h2>
+        <div className="playlist-container min-h-[80vh] bg-[rgb(22,52,79)] text-white py-8 px-4 lg:px-16 lg:overflow-x-hidden">
+            <h2 className="text-4xl text-teal-300 font-bold text-center mb-6">Hearease Player</h2>
             <div className="flex justify-center mb-6">
                 <button onClick={handlePlayAll} className="play-all-button bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300">
                     {isAllPlaying ? 'Pause All' : 'Play All'}
