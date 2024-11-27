@@ -1,50 +1,48 @@
-/* Sidebar CSS */
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    width: 15vw;
-    max-height: 90vh;
-}
-
-@media (max-width: 1024px) {
-    .sidebar {
-        width: 100vw;
-        max-height: 10vh;
+    /*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+* {
+    @apply box-border m-0 p-0;
+    font-family: Arial, sans-serif;
+  }
+  body {
+    @apply flex flex-col items-center justify-center min-h-screen bg-neutral-100;
+  }
+  nav {
+    @apply relative w-full;
+  }
+  .hamburger {
+    @apply hidden cursor-pointer flex-col gap-[5px] p-2.5;
+  }
+  .hamburger span {
+    @apply block w-[25px] h-[3px] bg-[#333] transition-[0.3s];
+  }
+  .menu {
+    @apply flex gap-[15px];
+    list-style: none;
+  }
+  .menu li {
+    @apply p-2.5;
+  }
+  .menu a {
+    @apply no-underline text-[#333];
+  }
+  @media (max-width: 768px) {
+    .hamburger {
+      @apply flex;
     }
-}
-
-.button-container {
-    flex-direction: row;
-    gap: 20vh;
-}
-
-.buttons {
-    background-color: blueviolet;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 4vh;
-    margin-top: 4vh;
-}
-
-/* Additional styles for transitions */
-.sidebar-hidden {
-    width: 0;
-    overflow: hidden;
-    transition: width 0.3s ease;
-}
-
-.sidebar-visible {
-    width: 64px;
-    transition: width 0.3s ease;
-}
-
-/* Hide sidebar on mobile when not open */
-@media (max-width: 1024px) {
-    .sidebar {
-        position: fixed;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        z-index: 40;
+    .menu {
+      @apply hidden absolute w-full bg-white flex-col left-0 top-[50px];
     }
-}
+    .menu li {
+      @apply text-center;
+    }
+    .menu.active {
+      @apply flex;
+    }
+  }
+  .content {
+    @apply text-center p-5;
+  }

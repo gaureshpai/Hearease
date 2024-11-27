@@ -1,6 +1,6 @@
 # HearEase - Manage Tinnitus with Ease
 
-HearEase is a comprehensive web application designed to assist individuals in managing tinnitus through soothing sounds and valuable information. This repository contains the source code for the HearEase project developed by Harshita, Dhanya, Pandyavarshini, and Karthika.
+HearEase is a comprehensive web application designed to assist individuals in managing tinnitus through soothing sounds and valuable information. This repository contains the source code for the HearEase project developed by Harshita, Dhanya .
 
 ## Features
 
@@ -42,8 +42,6 @@ We welcome contributions from everyone. Please follow these steps to contribute:
 - **Gauresh G Pai**
 - **Harshita**
 - **Dhanya**
-- **Pandyavarshini**
-- **Karthika**
 
 ## License
 

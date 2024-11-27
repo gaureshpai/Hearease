@@ -1,33 +1,27 @@
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 .Navbar {
-    background-color: black;
-    color: white;
-    padding: 10px;
-    font-family: 'Courier New', Courier, monospace;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  @apply bg-[#ef3131] text-[white] flex justify-between items-center p-2.5;
+  font-family: "Courier New", Courier, monospace;
 }
-
 .heading {
-    font-size: 2em;
+  @apply text-[2em];
 }
-
 .download {
-    font-size: 1em;
-    border-radius: 50px;
-    background: #524b4b;
-    
-    @media (max-width:788px){
-        display: none;
-    }
+  @apply text-[1em] rounded-[50px] hover:text-[1em] hover:rounded-[50px];
+  background: #524b4b;
 }
-
+@media (max-width: 788px) {
+  .download {
+    @apply hidden;
+  }
+}
 .download:hover {
-    font-size: 1em;
-    border-radius: 50px;
-    background: #644545;
+  background: #644545;
 }
