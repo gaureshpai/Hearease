@@ -45,9 +45,9 @@ body {
 
 .Player-container {
     height: 10vh;
-    background-color: green;
+    background-color:rgb(24,59,90);
     color: white;
-    width: 85vw;
+    width: 90vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,13 +60,14 @@ body {
 
 .player-buttons {
     margin-top: 1%;
+   
 }
 
-.about {
+/*.about {
     margin-bottom: 20px;
     margin: auto;
     padding: 2rem;
-    background: white;
+    background: rgb(34, 191, 199);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     display: flex;
@@ -76,7 +77,58 @@ body {
     @media (min-width: 300px) {
         flex-direction: row;
     }
+}*/
+
+.about {
+    margin: auto;
+    padding: 3rem;
+    background: linear-gradient(135deg, #6aaaae, #1f8ea7);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: black;
+
+  
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
 }
+
+
+.about > * {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+
+.about > *:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.about > *:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.about > *:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 .about h1 {
     font-size: 2.5rem;
@@ -86,11 +138,12 @@ body {
 .about p {
     font-size: 1.25rem;
     line-height: 1.6;
+    font:500;
 }
 
 .tinnitus-image {
     border: 1px solid #000000;
-    border-radius: 4px;
+    border-radius: 100px;
     height: auto;
     max-width: 200px;
 }
@@ -124,4 +177,9 @@ body {
 
 .home-container{
     height: 80vh;
+    background-color:blue;
+}
+
+.aside{
+    background-color: rgb(33, 85, 135);
 }
