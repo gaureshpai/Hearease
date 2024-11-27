@@ -61,7 +61,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="lg:overflow-y">
+      <body className="overflow-y-auto">
         <Navbar />
         <Analytics/>
         <div className="mainbody overflow-auto">

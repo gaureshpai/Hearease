@@ -13,12 +13,6 @@
   nav {
     @apply relative w-full;
   }
-  .hamburger {
-    @apply hidden cursor-pointer flex-col gap-[5px] p-2.5;
-  }
-  .hamburger span {
-    @apply block w-[25px] h-[3px] bg-[#333] transition-[0.3s];
-  }
   .menu {
     @apply flex gap-[15px];
     list-style: none;
