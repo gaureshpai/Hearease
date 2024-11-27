@@ -6,6 +6,7 @@ body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     overflow: hidden;
+    scroll-behavior: smooth;
 }
 
 .mainbody {

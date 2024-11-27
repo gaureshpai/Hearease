@@ -5,7 +5,7 @@ import { AiOutlineHeart } from 'react-icons/ai';
 
 const Sidebar = () => {
     return (
-        <aside className="flex flex-col items-center justify-center lg:min-h-screen bg-[rgb(60,170,176)]">
+        <aside className="flex flex-col items-center justify-center lg:min-h-[90vh] bg-[rgb(60,170,176)]">
             <nav className="flex lg:flex-col p-4  justify-center space-x-3 lg:space-x-0 lg:space-y-2 overflow-x-auto lg:overflow-x-visible">
                 <SidebarLink href="/" text="Home" icon={<FaHome />} />
                 <SidebarLink href="/About" text="About Tinnitus" icon={<FaInfoCircle />} />
