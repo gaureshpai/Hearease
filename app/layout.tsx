@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Analytics } from "@vercel/analytics/react"
+// import { Analytics } from "@vercel/analytics/react"
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/sidebar";
@@ -63,7 +63,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="overflow-y-hidden">
         <Navbar />
-        <Analytics/>
+        {/* <Analytics/> */}
         <div className="mainbody overflow-auto">
           <div className="sidebar">
             <Sidebar />
