@@ -12,7 +12,7 @@
     "@ducanh2912/next-pwa": "^10.2.9",
     "@vercel/analytics": "^1.5.0",
     "autoprefixer": "^10.4.20",
-    "next": "^15.1.7",
+    "next": "^15.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-feather": "^2.0.10",
